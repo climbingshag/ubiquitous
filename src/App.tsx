@@ -1,6 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { LoadingSpinner } from "./Components";
+import { useMe } from "./Api/Models/User/MeHooks";
+
+function Me() {
+  const me = useMe();
+  console.log("Me", me);
+  return <></>;
+}
 
 function App() {
   return (
@@ -18,6 +26,9 @@ function App() {
         >
           Learn React
         </a>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Me></Me>
+        </Suspense>
       </header>
     </div>
   );

@@ -1,0 +1,24 @@
+scalar Timestamp
+
+type List {
+  id: ID!
+  tasks: [Task!]!
+}
+
+type User {
+  id: ID!
+}
+
+type Task {
+  id: ID!
+  createdAt: Timestamp!
+  list: List!
+  user: User!
+  name: String!
+  completed: Boolean!
+  completedAt: Timestamp
+}
+
+type Query {
+  task(id: ID!): Task
+}

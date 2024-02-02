@@ -1,0 +1,15 @@
+scalar Timestamp
+
+type User {
+  id: ID!
+  createdAt: Timestamp!
+  firstName: String
+  lastName: String
+  address: String
+  phone: String
+}
+
+type Query {
+  user(id: ID!): User
+  me: User
+}

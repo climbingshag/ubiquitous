@@ -1,0 +1,18 @@
+scalar Timestamp
+
+# here for use as a reference
+type User {
+  id: ID!
+  lists: [List!]!
+}
+
+type List {
+  id: ID!
+  user: User!
+  name: String!
+  createdAt: Timestamp!
+}
+
+type Query {
+  list(id: ID!): List
+}
