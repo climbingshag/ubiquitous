@@ -16,4 +16,6 @@ Planned:
     * Add some sort of lambda as an event subscriber and have it do something
   Thus, a mini-model of a potential microservices framework, that could be expanded upon for nearly any use case.
 
+Also, try implementing with next.js, or any other framework I want to try out.
+
 
