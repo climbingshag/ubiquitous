@@ -1,9 +1,18 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { Me } from "./Containers";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock("./Containers");
+
+describe("<App> component", () => {
+  beforeEach(() => {
+    render(<App />);
+  });
+  test("Contains content", () => {
+    const linkElement = screen.getByText(/learn react/i);
+    expect(linkElement).toBeInTheDocument();
+  });
+  test("renders Me", () => {
+    expect(Me).toBeCalled();
+  });
 });

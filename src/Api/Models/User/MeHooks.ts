@@ -1,4 +1,5 @@
-import { useSuspenseQuery, gql, TypedDocumentNode } from "@apollo/client";
+import { gql, TypedDocumentNode } from "@apollo/client";
+import { useSuspenseQuery } from "@apollo/react-hooks";
 import type { User } from "../types.generated.ts";
 
 const GET_ME: TypedDocumentNode<{ me: User }> = gql`

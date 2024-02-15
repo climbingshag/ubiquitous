@@ -5,8 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ApiProvider } from "./Api";
 
-import yn from "yn";
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

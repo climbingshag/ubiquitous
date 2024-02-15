@@ -2,13 +2,7 @@ import { Suspense } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { LoadingSpinner } from "./Components";
-import { useMe } from "./Api/Models/User/MeHooks";
-
-function Me() {
-  const me = useMe();
-  console.log("Me", me);
-  return <></>;
-}
+import { Me } from "./Containers";
 
 function App() {
   return (

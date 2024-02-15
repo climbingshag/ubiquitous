@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.8.10",
+    "@apollo/react-hooks": "^4.0.0",
     "@apollo/server": "^4.10.0",
     "@faker-js/faker": "^8.4.0",
     "@graphql-codegen/typescript-operations": "^4.0.1",
@@ -32,7 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --collectCoverage",
     "eject": "react-scripts eject",
     "generate": "graphql-codegen",
     "start-mocks": "node ./MockApiServer/index.mjs",
@@ -58,6 +59,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-typed-document-node/core": "^3.2.0",
@@ -74,6 +76,17 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,tsx,ts}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "index.(ts|tsx|js|jsx)",
+      "reportWebVitals.ts",
+      "react-app-env.d.ts"
     ]
   }
 }

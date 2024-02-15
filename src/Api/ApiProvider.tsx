@@ -6,8 +6,8 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const ApiProvider = ({ children }: PropsWithChildren) => (
-  <ApolloProvider client={client}>{children}</ApolloProvider>
-);
+const ApiProvider = ({ children }: PropsWithChildren) => {
+  return <ApolloProvider client={client}>{children}</ApolloProvider>;
+};
 
 export default ApiProvider;

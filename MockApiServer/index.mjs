@@ -13,10 +13,6 @@ const __dirname = path.dirname(__filename);
 
 const typesArray = loadFilesSync(path.join(__dirname, '../src/Api/Models/**/*.graphql'))
 
-// const listTypeDefs = await loadFiles("../src/Api/Models/List/List.graphql");
-// const taskTypeDefs = await loadFiles("../Models/Task/Task.graphql");
-// const userTypeDefs = await loadFiles("../Models/User/User.graphql");
-
 const typeDefs = mergeTypeDefs(typesArray);
 
 const schema = makeExecutableSchema({ typeDefs});
@@ -27,8 +23,6 @@ const mockedSchema = addMocksToSchema({
   }); 
 
 export const mockServer = new ApolloServer({
-  // addMocksToSchema accepts a schema instance and provides
-  // mocked data for each field in the schema
   schema: mockedSchema,
 });
 
