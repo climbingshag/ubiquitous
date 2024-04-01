@@ -26,6 +26,6 @@ export const mockServer = new ApolloServer({
   schema: mockedSchema,
 });
 
-const { url } = await startStandaloneServer(mockServer);
+const { url } = await startStandaloneServer(mockServer,{listen: { port: 4000 }});
 
 console.log(`Mock API Server started at ${url}`);

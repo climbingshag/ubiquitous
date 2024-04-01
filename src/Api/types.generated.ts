@@ -24,9 +24,14 @@ export type List = {
   user: User;
 };
 
+export type ListsQueryParams = {
+  usrId: Scalars['ID']['input'];
+};
+
 export type Query = {
   __typename?: 'Query';
   list?: Maybe<List>;
+  lists: Array<List>;
   me?: Maybe<User>;
   task?: Maybe<Task>;
   user?: Maybe<User>;
@@ -35,6 +40,11 @@ export type Query = {
 
 export type QueryListArgs = {
   id: Scalars['ID']['input'];
+};
+
+
+export type QueryListsArgs = {
+  params?: InputMaybe<ListsQueryParams>;
 };
 
 

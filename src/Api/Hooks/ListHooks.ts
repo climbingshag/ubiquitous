@@ -7,6 +7,7 @@ query GetList($id: ID!) {
     list(id: $id) {
       id
       createdAt
+      name
     }
 }`
 

@@ -1,29 +1,23 @@
-import { Suspense } from "react";
-import logo from "./logo.svg";
+import { Suspense, StrictMode } from "react";
 import "./App.css";
 import { LoadingSpinner } from "./Components";
-import { Me } from "./Containers";
+import { appRouter } from "./appRouter";
+import { RouterProvider } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./muiTheme";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Me></Me>
-        </Suspense>
-      </header>
+      <StrictMode>
+        <ThemeProvider theme={theme}>
+          <CssBaseline enableColorScheme={true} />
+          <Suspense fallback={<LoadingSpinner />}>
+            <RouterProvider router={appRouter} />
+          </Suspense>
+        </ThemeProvider>
+      </StrictMode>
     </div>
   );
 }

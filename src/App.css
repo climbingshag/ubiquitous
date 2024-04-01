@@ -5,23 +5,29 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  color: #28ad2f;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header-item {
+  height: -webkit-fill-available;
+  padding: 10px;
 }
 
 .App-link {

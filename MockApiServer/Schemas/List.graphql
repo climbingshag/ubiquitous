@@ -10,9 +10,15 @@ type List {
   id: ID!
   user: User!
   name: String!
+  tasks: [Task!]!
   createdAt: Timestamp!
+}
+
+input ListsQueryParams {
+  usrId: ID!
 }
 
 type Query {
   list(id: ID!): List
+  lists(params: ListsQueryParams): [List!]!
 }

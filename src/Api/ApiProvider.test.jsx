@@ -1,11 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ApiProvider from "./ApiProvider";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloClient, ApolloProvider } from "@apollo/client";
 
 jest.mock("@apollo/client");
 
 describe("ApiProvider", () => {
-
   test("Renders self", () => {
     const testChildren = <div />;
     render(<ApiProvider>

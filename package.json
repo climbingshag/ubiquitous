@@ -6,11 +6,14 @@
     "@apollo/client": "^3.8.10",
     "@apollo/react-hooks": "^4.0.0",
     "@apollo/server": "^4.10.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@faker-js/faker": "^8.4.0",
     "@graphql-codegen/typescript-operations": "^4.0.1",
     "@graphql-tools/mock": "^9.0.1",
     "@graphql-tools/schema": "^10.0.2",
     "@graphql-tools/utils": "^10.0.13",
+    "@mui/material": "^5.15.14",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -25,6 +28,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^6.1.6",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "typescript": "^5.3.3",
     "web-vitals": "^2.1.0",
@@ -37,8 +41,8 @@
     "eject": "react-scripts eject",
     "generate": "graphql-codegen",
     "start-mocks": "node ./MockApiServer/index.mjs",
-    "prestart": "yarn generate",
-    "predev": "yarn generate"
+    "prestart": "yarn run generate",
+    "predev": "yarn run generate"
   },
   "eslintConfig": {
     "extends": [
