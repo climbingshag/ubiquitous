@@ -1,7 +1,7 @@
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { useMe } from "../Api/Hooks/MeHooks";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function RootPage() {
   const { lists } = useMe();
   return (

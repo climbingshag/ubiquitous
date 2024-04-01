@@ -8,6 +8,13 @@ query GetList($id: ID!) {
       id
       createdAt
       name
+      tasks {
+        id
+  createdAt
+  name
+  completed
+  completedAt
+      }
     }
 }`
 
